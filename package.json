@@ -1,14 +1,31 @@
 {
-    "name": "app-service-hello-world",
-    "description": "Simple Hello World Node.js sample for Azure App Service",
-    "version": "0.0.1",
-    "private": true,
-    "license": "MIT",
-    "author": "Microsoft",
-    "scripts": {
-        "start": "node index.js"
-    },
-    "dependencies": {
-        "express": "^4.18.1"
-    }
+  "name": "health-risk-api",
+  "description": "Simple Hello World Node.js sample for Azure App Service",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "authors": ["An00bRektn", "Matt Espinos", "James Barkauskas"],
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TitanticSwimTeam/health-risk-api.git"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "health"
+  ],
+  "bugs": {
+    "url": "https://github.com/TitanticSwimTeam/health-risk-api/issues"
+  },
+  "homepage": "https://github.com/TitanticSwimTeam/health-risk-api#readme"
 }
