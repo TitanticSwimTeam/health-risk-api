@@ -1,11 +1,13 @@
-# Node.js and Express Hosted on Microsoft Azure Template
+# Health Risk API
+> TitanicSwimTeam | Sprint 4
 
-Dependencies: Node.js and Express
+This repository hosts the source code for the Health Insurance Risk Calculator API project.
 
-This repository is a template that can be used to create a Node.js and Express website for hosting on Microsoft Azure.
+## Local Deployment
+This assumes you have Node.js and npm installed on the machine.
 
-Initial Usage:
-- npm install express
-- npm start
-
-
+```shell
+$ git clone https://github.com/TitanticSwimTeam/health-risk-api.git; cd health-risk-api
+$ npm install
+$ npm start
+```
