@@ -20,6 +20,8 @@ app.get('/api/health', function(request, response) {
 app.get('/api/bmi', function(request, response) {
 	response.type('application/json');
 	// TODO: Accept JSON post request and then return calculated BMI
+	var res = '{"bmi": 20}'
+	response.send(res);
 });
 
 app.get('/api/risk', function(request, response) {
@@ -29,6 +31,8 @@ app.get('/api/risk', function(request, response) {
 	//		  blood pressure (string), family disease (list)
 	// Then use the point values assigned in the requirements to return
 	// a json object of {"risk": low|moderate|high|uninsurable, "score": SCORE}
+	var res = '{"risk": "low", "score": 69}'
+	response.send(res);
 });
 
 app.listen(port, function() {
