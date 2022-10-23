@@ -7,7 +7,7 @@ const cors = require('cors')
 
 const app = express();
 app.use(bodyParser.json());
-app.use('/api', cors());
+app.use('/api', cors()); // CORS is importante :)
 app.use(express.static(__dirname + '/client'))
 
 const port = process.env.PORT || 1337
@@ -52,15 +52,7 @@ app.route('/api/bmi')
 
 
 	}).post((request, response) => {
-		response.type('application/json');
-		var res = "";
-
-		if (request.get('Content-Type') != "application/json") {
-			res = '{"msg":"Please make POST request as JSON"}';
-		} else {
-			var data = request.body;
-			res = request.body;
-		}
+		// TODO implement a POST version of this
 	});
 
 app.get('/api/risk', function(request, response) {
@@ -91,6 +83,8 @@ app.get('/api/risk', function(request, response) {
 	}
 
 });
+
+
 
 app.listen(port, function() {
 	console.log("Server is running at http://localhost:"+port);
