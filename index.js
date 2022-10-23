@@ -2,12 +2,16 @@ const express = require("express");
 const convert = require("./lib/conversions")
 var bodyParser = require('body-parser');
 var http = require('http')
+const cors = require('cors')
+
 
 const app = express();
 app.use(bodyParser.json());
+app.use('/api', cors());
 app.use(express.static(__dirname + '/client'))
 
 const port = process.env.PORT || 1337
+
 
 // Health check, verify that the server is running
 app.get('/api/health', function(request, response) {
@@ -77,10 +81,10 @@ app.get('/api/risk', function(request, response) {
 		} else if (score <= 75) {
 			risk = "high";
 		} else {
-			risk = "uninsurable"
+			risk = "uninsurable";
 		}
 
-		response.status(200).json({risk: risk, score: score})
+		response.status(200).json({risk: risk, score: score});
 
 	} catch(err) {
 		response.status(500).json({error: "Error calculating risk"});
